@@ -1,8 +1,9 @@
 get '/' do
   # render home page
   @users = User.all
-
+  @user.skills << Skill.new params[:skill]
   erb :index
+
 end
 
 #----------- SESSIONS -----------
